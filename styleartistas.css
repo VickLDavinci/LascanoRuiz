@@ -1,0 +1,401 @@
+/* --- RESET GENERAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  /* --- CUERPO DE LA PÁGINA --- */
+body {
+    font-family: "Gamay Book", sans-serif;
+    background-color: #fff;
+    color: #ff1010;
+    line-height: 1.6;
+    margin: 0;
+}
+
+header {
+    font-family: "Gamay Book", sans-serif;
+    color: #ff1010;
+}
+
+.top-banner {
+    width: 100%;
+    background-color: #ff1010;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.top-banner p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 55s linear infinite;
+}
+
+@keyframes scrollText {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 80px 20px 20px; /* espacio porque el banner está fixed */
+}
+
+
+
+/* ----- HEADER GENERAL ----- */
+header {
+    padding: 60px 20px 40px;
+    background-color: #fff;
+}
+
+  /* ----- CONTENEDOR FLEX PARA 2 COLUMNAS ----- */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 40px 0;
+    margin: 0;
+}
+
+
+  /* ----- COLUMNA IZQUIERDA ----- */
+.header-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 40px;
+ }
+
+
+  /* BUSCADOR CON ÍCONO */
+.buscador {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ff1010;
+    border-radius: 30px;
+    padding: 8px 12px;
+    margin-bottom: 30px;
+    width: fit-content;
+}
+
+.buscador input {
+    font-family: "gamay editorial medium", sans-serif;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+    color: #ff1010;
+    padding-right: 8px;
+}
+
+.buscador .lupa {
+    width: 16px;
+    height: 16px;
+}
+
+  /* LOGO DE TEXTO */
+.header-left h1 {
+    font-size: 7rem;
+    font-family: "gamay medium";
+    color: #ff1010;
+    margin-bottom: 20px;
+}
+
+  /* MENÚ IZQUIERDO */
+.menu-principal {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-principal li {
+    font-family: "gamay editorial medium", sans-serif;
+    background-color: #ffe9f5;
+    color: #ff1010;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    width: fit-content;
+    min-width: 500px;
+    font-size: 1rem;
+    text-align: left;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.menu-principal li:hover {
+    background-color: #ffb8d9;
+}
+
+  /* ----- COLUMNA DERECHA (IMAGEN) ----- */
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.Lapiceras {
+    max-width: 900%;
+        max-height: 800px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin-right: 0;
+    
+}
+
+.menu-principal {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.menu-principal li {
+    font-family: "gamay editorial medium", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.menu-principal li:hover {
+    color: #ff1010;
+}
+
+.cta {
+    padding: 10px 40px;
+    background-color: #ff1010;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: #c00;
+}
+
+/* --- ACA VA CSS ARTISTAS */
+
+.galeria-artistas {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+     align-items: flex-start;
+}
+
+.tarjeta-artista {
+      background-color: #ffe9f5;
+        border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+  gap: 30px;
+   width: 60%;
+   flex-direction: row;
+  box-sizing: border-box;
+  margin-left: 0;        /* Asegura que no haya espacio a la izquierda */
+  margin-right: auto;    /* Empuja hacia la izquierda */
+}
+
+.tarjeta-artista.invertida {
+    margin-left: 50%;
+  text-align: right;
+}
+
+
+.tarjeta-artista img {
+  width: auto;
+  min-width: 240px;
+  max-width: 400px;
+  border-radius: 20px;
+  object-fit: cover;
+  flex-shrink: 0; 
+}
+
+.tarjeta-artista .info {
+  background-color: #ffe9f5;
+  border-radius: 80px;
+  padding: 30px;
+  max-width: 700px;
+  color: #ff1010;
+  font-family: "Gamay Book", sans-serif;
+  text-align: left;
+}
+
+
+/* -------------------------
+CONTENEDOR DE SUSCRIPCIÓN CON FORMA
+------------------------- */
+
+footer{
+  padding-top: 10px;
+}
+
+#suscripcion {
+    background-color: #ffe9f5;
+    padding: 60px 20px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+
+  /* FORMULARIO */
+.suscripcion-forma h2 {
+    font-size: 3rem;
+    margin-bottom: 7px; /* MÁS CERCANO AL PÁRRAFO */
+    font-family: "gamay medium" ;    
+
+}
+
+.suscripcion-forma p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+
+    
+#redes-sociales {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #ffe9f5;
+    padding: 20px 0;
+}
+
+#redes-sociales img {
+    width: 32px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#redes-sociales img:hover {
+    transform: scale(1.1);
+}
+
+#suscripcion input[type="email"] {
+    padding: 12px;
+    width: 60%;
+    max-width: 300px;
+    margin: 20px 10px 10px 0;
+    border: 2px solid #ff1010;
+    border-radius: 25px;
+    font-size: 1rem;
+}
+
+.btn-popup {
+    padding: 12px 24px;
+    background-color: #ff1010;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn-popup:hover {
+  background-color: #fff;
+  color: #bd0d0d;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+#popup:target {
+  display: block;
+}
+
+.modal-content {
+  background: white;
+  width: 320px;
+  margin: 15% auto;
+  padding: 20px 30px;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  font-family: "gamay book", sans-serif;
+  color: #ff1010;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content p {
+  font-size: 1.1rem;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #aaa;
+  font-weight: bold;
+}
+
+.close:hover {
+  color: #ff1010;
+}
+/* -------------------------
+    ILUSTRACIÓN FINAL
+  ------------------------- */
+.imagen-final {
+    text-align: center;
+    padding: 40px 0 20px;
+    background-color: #ffe9f5;
+    
+}
+.imagen-final {
+    width: 99vw;
+    overflow: hidden;
+    background-color: #ffe9f5;
+}
+
+.imagen-final img {
+    width: 99%;
+    height: auto;
+    display: block;
+}
+#suscripcion, #redes-sociales, .imagen-final {
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
